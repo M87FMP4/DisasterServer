@@ -134,7 +134,7 @@ bool game_init(int exe, int8_t map, Server* server)
 		return false;
 	Debug("Entity list created.");
 
-	if (!dylist_create(&server->game.left, 7))
+	if (!dylist_create(&server->game.left, PLAYER_LIMIT))
 		return false;
 	Debug("Left players list created.");
 

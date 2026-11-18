@@ -40,7 +40,7 @@ bool allocate_server(uint16_t base_port, uint16_t n)
 
 	// Init lobby
 	MutexCreate(server->state_lock);
-	RAssert(dylist_create(&server->peers, 7));
+	RAssert(dylist_create(&server->peers, PLAYER_LIMIT));
 	
 	ENetAddress addr;
 	addr.host = ENET_HOST_ANY;
