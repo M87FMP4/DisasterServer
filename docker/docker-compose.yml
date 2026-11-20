@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  server:
+    build: .
+    container_name: disasterserver
+    ports:
+      - "8606:8606/udp"
+    volumes:
+      - ./config.json:/app/config.json
+    restart: unless-stopped
